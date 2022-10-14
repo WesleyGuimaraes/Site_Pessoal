@@ -17,11 +17,11 @@
             <input type="checkbox" id="icon">
             <label for="icon"><i class="fa-solid fa-circle-chevron-down"></i></label>    
             <div class="nav">
-                <ul class="lista">
-                    <li><a href="#First">Home</a></li>
-                    <li><a href="#Second">About me</a></li>
-                    <li><a href="#Third">Projects</a></li>
-                    <li><a href="#Fourth">Habilities</a></li>
+                <ul id="lista">
+                    <li><a href="#First" class='a' onclick="fechar()">Home</a></li>
+                    <li><a href="#Second" class='a' onclick="fechar()">About me</a></li>
+                    <li><a href="#Third" class='a' onclick="fechar()" >Projects</a></li>
+                    <li><a href="#Fourth" class='a' onclick="fechar()">Habilities</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,17 +37,33 @@
         </div>
 
         <div class="section s2">
-            <h1>Second Section</h1>
+            <div id="box_texto">
+                <h2>Sobre mim</h2>
+                <p>
+                    Olá, me chamo Wesley Lima Guimarães. 
+                    Sou estudante e apaixonado por tecnologia,
+                    principalmente aquelas relacionadas com 
+                    computadores, sites e aplicativos.
+                    <br />
+                    Atualmente não possuo experiência profissional,
+                    porém, pratico tecnologias como HTML, CSS e JS
+                    em projetos pessoais (disponíveis em meu Github)
+                </p>
+            </div>
 
+            <img src="Avatars - Default.png" alt="Avatar">
         </div>
 
         <div class="section s3">
-            <h1>Third Section</h1>
+            <h2>Projetos</h2>
 
+            <div id="container">
+                
+            </div>
         </div>
 
         <div class="section s4">
-            <h1>Fourth Section</h1>
+            <h2>Habilidades</h2>
 
         </div>
     </div>
