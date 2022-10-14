@@ -14,6 +14,10 @@ html, body{
 span{
     background-color: white !important;
 }
+p{
+    text-align: left;
+}
+/*First Section*/
 .naveg{
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +44,7 @@ label{
 .naveg a{
     text-decoration: none;
 }
-.lista{
+#lista{
     list-style: none;
     display: flex;
     gap: 30px;
@@ -48,23 +52,23 @@ label{
 #icon, label{
     display: none;
 }
-.lista li a{
+#lista li a{
     padding: 10px 35px;
     border: solid transparent 1px;
     transition: .2s ease-in-out;
 }
-.lista li a:hover{
+#lista li a:hover{
     border: solid 1px white;
     border-radius: 10px;
 }
 .s1{
-        position: relative;
+    position: relative;
 }
 .s1 h1{
-        float: right;
-        margin: 15vh 20vw 0 0;
-        text-align: left;
-        font-size: 42px;
+    float: right;
+    margin: 15vh 20vw 0 0;
+    text-align: left;
+    font-size: 42px;
 }
 .s1 h1 strong{
         font-size: 42px;
@@ -125,6 +129,44 @@ h1:after{
         100% { transform: translate(5px, -20px);}
 }
 
+/*Second Section*/
+.s2{
+    position: relative;
+}
+#box_texto{
+    position: absolute;
+    left: 10%;
+    top: 35vh;
+    width: 30%;
+    text-align: left;
+}
+#box_texto h2{
+    font-size: 42px;
+    text-align: left;
+    padding: 10px 0;
+}
+#box_texto p{
+    font-size: 20px;
+}
+.s2 img{
+    position: absolute;
+    right: 20%;
+    top: 35vh;
+}
+
+/*Third Section*/
+.s3 h2{
+    font-size: 42px;
+    margin: 0 auto;
+}
+
+/*Fourth Section*/
+.s4 h2{
+    font-size: 42px;
+    margin: 0 auto;
+}
+
+
 
 @media (max-width: 1024px) { /*NESTHUB*/
     .s1 h1{
@@ -163,15 +205,42 @@ h1:after{
         border-radius: 20px;
         transition: .2s ease-in-out;
     }
+
+
+    /*Second Section*/
+    .s2{
+        position: relative;
+    }
+    #box_texto{
+        position: absolute;
+        left: 10%;
+        top: 35vh;
+        width: 30%;
+        text-align: left;
+    }
+    #box_texto h2{
+        font-size: 35px;
+        text-align: left;
+        padding: 10px 0;
+    }
+    #box_texto p{
+        font-size: 15px;
+    }
+    .s2 img{
+        position: absolute;
+        right: 15%;
+        top: 35vh;
+        width: 40vh;
+    }
 }
 
 @media (max-width: 820px) { /*IPAD AIR*/
-    .lista li a{
+    #lista li a{
         padding: 10px 15px;
         border: solid transparent 1px;
         transition: .2s ease-in-out;
     }
-    .lista li a:hover{
+    #lista li a:hover{
         border: solid 1px white;
         border-radius: 10px;
     }
@@ -212,20 +281,49 @@ h1:after{
         transition: .2s ease-in-out;
         width: 120px;
     }
+    /*Second Section*/
+    .s2{
+        position: relative;
+    }
+    #box_texto{
+        position: absolute;
+        left: 0;
+        top: 20vh;
+        width: 100%;
+        text-align: center;
+        padding: 40px;
+    }
+    #box_texto h2{
+        font-size: 42px;
+        text-align: left;
+        padding: 10px 0;
+        text-align: center;
+    }
+    #box_texto p{
+        font-size: 20px;
+        text-align: center;
+    }
+    .s2 img{
+        position: absolute;
+        right: 0;
+        margin: 30%;
+        top: 35vh;
+        width: 40%;
+    }
 }
 
 @media (max-width: 768px) { /*IPAD MINI*/
-    .lista{
+    #lista{
         list-style: none;
         display: flex;
         gap: 15px;
     }
-    .lista li a{
+    #lista li a{
         padding: 10px 10px;
         border: solid transparent 1px;
         transition: .2s ease-in-out;
     }
-    .lista li a:hover{
+    #lista li a:hover{
         border: solid 1px white;
         border-radius: 10px;
     }
@@ -275,7 +373,7 @@ h1:after{
         overflow: hidden;
         transition: .5s ease-in-out;
     }
-    .lista{
+    #lista{
         flex-direction: column;
         align-items: center;
         padding: 20px;
@@ -287,7 +385,8 @@ h1:after{
     }
     #icon:checked ~ .nav{
         max-height: 40vh;
-        width: 75vw;
+        width: 60vw;
+        margin: 2vh 20vw;
         background-color: rgba(113, 75, 202, 0.8);
         border-radius: 20px;
     }
@@ -295,14 +394,14 @@ h1:after{
         position: relative;
     }
     .s1 img{
-        top: calc(((100vh - 24vh)/3));
+        top: calc(((100vh - 26vh)/3));
         margin: 0 25vw;
         -webkit-animation: bounce 1s infinite  alternate;
         animation: bounce 1s infinite  alternate;
         width: 45vw;
     }
     .s1 h1{
-        margin: 6vh auto 0 auto;
+        margin: 7vh auto 0 auto;
         text-align: left;
         font-size: 25px;
     }
@@ -313,21 +412,52 @@ h1:after{
     #linkedin{
         position: absolute;
         bottom: 10vh;
-        right: 12%;
-        padding: 20px;
+        right: 8%;
+        padding: 5%;
         background-color: rgba(113, 75, 202, 0.5);
         border-radius: 20px;
         transition: .2s ease-in-out;
-        width: 120px;
+        width: 40%;
     }
     #github{
         position: absolute;
         bottom: 10vh;
-        left: 12%;
-        padding: 20px;
+        left: 8%;
+        padding: 5%;
         background-color: rgba(113, 75, 202, 0.5);
         border-radius: 20px;
         transition: .2s ease-in-out;
-        width: 120px;
+        width: 40%;
     }
+        /*Second Section*/
+    .s2{
+        position: relative;
+    }
+    #box_texto{
+        position: absolute;
+        left: 0;
+        top: 20vh;
+        width: 100%;
+        text-align: center;
+        padding: 42px;
+    }
+    #box_texto h2{
+        font-size: 35px;
+        text-align: left;
+        padding: 10px 0;
+        text-align: center;
+    }
+    #box_texto p{
+        font-size: 15px;
+        text-align: justify;
+    }
+    .s2 img{
+        position: absolute;
+        right: 0;
+        margin: 0 35%;
+        top: auto;
+        bottom: 5%;
+        width: 30%;
+    }
+
 }
