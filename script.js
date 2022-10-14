@@ -1,3 +1,4 @@
+//Layout config (FullPage.js)
 new fullpage('#fullpage', {
     autoScrolling: true,
     navigation: true,
@@ -8,9 +9,9 @@ new fullpage('#fullpage', {
     controlArrows: false, 
     slidesNavigation: true, 
     credits: {enabled: false},
-})
+}) 
 
-
+//Writing Animation
 var i = 0;
     var tag = document.getElementById("text");
     var html = document.getElementById("text").innerHTML;
@@ -27,3 +28,13 @@ var i = 0;
     }
 
 typeWriter();
+
+
+//Close options
+a.addEventListener('click', fechar())
+function fechar() {
+    const checkbox = document.getElementById('icon')
+    const a = document.getElementsByClassName('a')
+
+    checkbox.checked = false
+}
