@@ -1,3 +1,7 @@
+:root{
+    --orbit-base-pc: 60vh; 
+    --orbit-base-tablet: 60vw;
+}
 *{
     margin: 0;
     padding: 0;
@@ -148,25 +152,120 @@ h1:after{
 #box_texto p{
     font-size: 20px;
 }
-.s2 img{
+#img_container img{
     position: absolute;
-    right: 20%;
-    top: 35vh;
+    width: 40%;
 }
+#img_container{
+    position: relative;
+    width: var(--orbit-base-pc);
+    height: var(--orbit-base-pc);
+    float: right;
+    margin: 15vh 10vw 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#html-orbit {
+  position: absolute;
+  width: calc(var(--orbit-base-pc)/2);
+  height: calc(var(--orbit-base-pc)/2);
+  border-radius: 100%;
+  animation: orbit 10s linear infinite;
+}
+#css-orbit {
+  position: absolute;
+  width: calc((var(--orbit-base-pc)/4)*3 - 5vh);
+  height: calc((var(--orbit-base-pc)/4)*3 - 5vh);
+  border-radius: 100%;
+  animation: orbit 15s linear infinite;
+}
+#js-orbit {
+  position: absolute;
+
+  width: calc(var(--orbit-base-pc) - 10vh);
+  height: calc(var(--orbit-base-pc) - 10vh);
+  border-radius: 100%;
+  animation: orbit 15s linear infinite;
+}
+.fa-css3-alt, .fa-html5, .fa-square-js{
+    position: absolute;
+    padding: 4px;
+    border-radius: 10px;
+}
+.fa-html5 {
+  top: 62px;
+  left: -6px;
+  background-color: red;
+  animation: rotate 5s linear infinite;
+}
+.fa-css3-alt {
+  top: 25px;
+  left: 17px;
+  background-color: blue;
+  animation: rotate 10s linear infinite;
+
+}
+.fa-square-js {
+  top: -17px;
+  left: 125px;
+  background-color: yellow;
+  animation: rotate 15s linear infinite;
+
+}
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+    100%{transform: rotate(360deg);}
+}
+
 
 /*Third Section*/
-.s3 h2{
-    font-size: 42px;
-    margin: 0 auto;
+.s3{
+    position: relative;
 }
-
-/*Fourth Section*/
-.s4 h2{
+#proj-container h2{
     font-size: 42px;
-    margin: 0 auto;
+    padding: 12px;
+    position: absolute;
+    top: 0;
 }
-
-
+#proj-container{
+    position: absolute;
+    bottom: calc((100vh - 18vh - 70vh)/2);
+    width: 90vw;
+    height: 70vh;
+    margin: 0 calc((100vw - 90vw)/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proj-card{
+    width: calc((90vw /3) - 4vw);
+    height: calc(70vh - 20vh);
+    border: solid 3px rgba(113, 75, 202);
+    border-radius: 20px;
+    transition: ease-in-out .3s;
+    overflow: hidden;
+    margin: 0 1%;
+}
+.image img{
+    width: 100%;
+    padding: 2%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.info h3{
+    font-size: 30px;
+    padding: 20px;
+}
+.proj-card:hover{
+    transform: scale(1.05);
+}
 
 @media (max-width: 1024px) { /*NESTHUB*/
     .s1 h1{
@@ -303,13 +402,115 @@ h1:after{
         font-size: 20px;
         text-align: center;
     }
-    .s2 img{
+    #img_container img{
         position: absolute;
         right: 0;
-        margin: 30%;
-        top: 35vh;
-        width: 40%;
+        margin: 28%;
+        top: 0vh;
+        width: 44%;
     }
+    #img_container{
+        position: relative;
+        width: var(--orbit-base-tablet);
+        height: var(--orbit-base-tablet);
+        float: right;
+        margin: 25vh 20vw 0 20vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #html-orbit {
+      position: absolute;
+      width: calc(var(--orbit-base-tablet)/2);
+      height: calc(var(--orbit-base-tablet)/2);
+      border-radius: 100%;
+      animation: orbit 10s linear infinite;
+    }
+    #css-orbit {
+      position: absolute;
+      width: calc((var(--orbit-base-tablet)/4)*3 - 5vh);
+      height: calc((var(--orbit-base-tablet)/4)*3 - 5vh);
+      border-radius: 100%;
+      animation: orbit 15s linear infinite;
+    }
+    #js-orbit {
+      position: absolute;
+    
+      width: calc(var(--orbit-base-tablet) - 10vh);
+      height: calc(var(--orbit-base-tablet) - 10vh);
+      border-radius: 100%;
+      animation: orbit 15s linear infinite;
+    }
+    .fa-css3-alt, .fa-html5, .fa-square-js{
+        position: absolute;
+        padding: 4px;
+        border-radius: 10px;
+    }
+    .fa-html5 {
+      top: 62px;
+      left: -6px;
+      background-color: red;
+      animation: rotate 5s linear infinite;
+    }
+    .fa-css3-alt {
+      top: 25px;
+      left: 17px;
+      background-color: blue;
+      animation: rotate 10s linear infinite;
+    
+    }
+    .fa-square-js {
+      top: -17px;
+      left: 125px;
+      background-color: yellow;
+      animation: rotate 15s linear infinite;
+    
+    }
+    /*Third Section*/
+    .s3{
+        position: relative;
+    }
+    #proj-container h2{
+        font-size: 42px;
+        padding: 0px;
+        position: absolute;
+        top: 0;
+    }
+    #proj-container{
+        position: absolute;
+        bottom: calc((100vw - 18vw - 70vw)/2);
+        width: 90vw;
+        height: 70vh;
+        margin: 0 calc((100vw - 90vw)/2);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .proj-card{
+        width: calc((90vw /2) - 4vw);
+        height: calc((70vh - 20vh)/2);
+        border: solid 3px rgba(113, 75, 202);
+        border-radius: 20px;
+        transition: ease-in-out .3s;
+        overflow: hidden;
+        margin: 1%;
+        }
+    .image img{
+        width: 100%;
+        padding: 2%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    .info h3{
+        font-size: 30px;
+        padding: 20px;
+    }
+    .proj-card:hover{
+        transform: scale(1.05);
+    }
+
 }
 
 @media (max-width: 768px) { /*IPAD MINI*/
@@ -364,6 +565,44 @@ h1:after{
         transition: .2s ease-in-out;
         width: 120px;
     }
+    /*Second Section*/
+    #img_container img{
+        position: absolute;
+        right: 0;
+        margin: 25%;
+        top: 0vh;
+        width: 50%;
+    }
+    #img_container{
+        position: relative;
+        width: var(--orbit-base-tablet);
+        height: var(--orbit-base-tablet);
+        float: right;
+        margin: 45vh 20vw 0 20vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Third Section*/
+    .s3{
+        position: relative;
+    }
+    #proj-container h2{
+        font-size: 40px;
+        padding: 0px;
+        position: absolute;
+        top: -20px;
+    }
+    .proj-card{
+        width: calc((90vw /2) - 4vw);
+        height: calc(((70vh - 20vh)/10)*6);
+        border: solid 3px rgba(113, 75, 202);
+        border-radius: 20px;
+        transition: ease-in-out .3s;
+        overflow: hidden;
+        margin: 1%;
+        }
 }
 
 @media (max-width: 640px){ /*MOBILE*/
@@ -372,6 +611,9 @@ h1:after{
         max-height: 0;
         overflow: hidden;
         transition: .5s ease-in-out;
+    }
+    .naveg{
+        height: 16vh;
     }
     #lista{
         flex-direction: column;
@@ -436,10 +678,11 @@ h1:after{
     #box_texto{
         position: absolute;
         left: 0;
-        top: 20vh;
+        right: 10px;
+        top: 16vh;
         width: 100%;
         text-align: center;
-        padding: 42px;
+        padding: 44px;
     }
     #box_texto h2{
         font-size: 35px;
@@ -459,5 +702,38 @@ h1:after{
         bottom: 5%;
         width: 30%;
     }
+        /*Third Section*/
+    #proj-container h2{
+        font-size: 30px;
+        top: -30px;
+    }
+    #proj-container{
+        position: absolute;
+        margin: 0 5vw 0 0;
+        width: 90vw;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info h3{
+        display: none;
+        visibility: hidden;
+    }
+    .image{
+        width: 80vw;
+        height: 23vh;
+    }
+    .image img{
+        object-fit: cover;
+        padding: 0;
+        background-position: center;
+        }
+    .proj-card{
+        width: 78vw;
+        height: 20vh;
+        overflow: hidden;
+        margin: 1%;
+        }
 
 }
