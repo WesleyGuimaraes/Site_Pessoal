@@ -11,6 +11,42 @@
     <title>PORTFOLIO</title>
 </head>
 <body>
+    <!--
+    <circle class="circle cir1"></circle>
+    <circle class="circle cir2"></circle>
+    <circle class="circle cir3"></circle>
+    <circle class="circle cir4"></circle>
+    <circle class="circle cir5"></circle>
+    <circle class="circle cir6"></circle>
+    <circle class="circle cir7"></circle>
+    .cir1{ width: var(--cir1); height: var(--cir1); border-radius: 
+    50%; border: solid rgba(15, 15, 15, 0.6) 1px; background-col
+    or: rgba(30, 30, 30, 1); position: absolute; z-index: 2; top
+    : 50px; left: 80px; } .cir2{ width: var(--cir2); height: var
+    (--cir2); border-radius: 50%; border: solid rgba(15, 15, 
+    15, 0.8) 1px; background-color: rgba(30, 30, 30, 1); posi
+    tion: absolute; top: 150px; right: 80px; } .cir3{ width: 
+    var(--cir3); height: var(--cir3); border-radius: 50%;
+    border: solid rgba(15, 15, 15, 0.4) 1px; background-
+    color: rgba(0, 0, 0, 1); position: absolute; top: 30
+    0px; left: 400px; } .cir4{ width: var(--cir4); heigh
+    t: var(--cir4); border-radius: 50%; border: solid 
+    rgba(15, 15, 15, 0.4) 1px; background-color: rgba(3
+    0, 30, 30, 1); position: absolute; top: 600px; left: 
+    600px; } .cir5{ width: var(--cir5); height: var(--cir5
+    ; border-radius: 50%; border: solid rgba(15, 15, 1
+    5, 0.4) 1px; background-color: rgba(230, 7, 7, 1);
+    position: absolute; top: 700px; right: 200px; } .
+    cir6{ width: var(--cir6); height: var(--cir6); bo
+    rder-radius: 50%; border: solid rgba(15, 15, 1
+    5, 0.4) 1px; background-color: rgba(255, 12, 1
+    2, 1); position: absolute; top: 750px; left: 1
+    00px; } .cir7{ width: var(--cir7); height: var
+    (--cir7); border-radius: 50%; border: soli
+    d rgba(15, 15, 15, 0.4) 1px; background-co
+    lor: rgba(255, 12, 12, 1); position: absol
+    ute; top: 800px; right: 100px; }
+    -->
     <header id="header">
         <nav class="naveg"> <!--Navegação / Menu-->
             <a href="index.html" class="logo"><i class="fa-solid fa-robot fa-4x"></i></a>
@@ -18,10 +54,10 @@
             <label for="icon"><i class="fa-solid fa-circle-chevron-down"></i></label>    
             <div class="nav">
                 <ul id="lista">
-                    <li><a href="#First" class='a' onclick="fechar()">Home</a></li>
-                    <li><a href="#Second" class='a' onclick="fechar()">About me</a></li>
-                    <li><a href="#Third" class='a' onclick="fechar()" >Projects</a></li>
-                    <li><a href="#Fourth" class='a' onclick="fechar()">Habilities</a></li>
+                    <li><a href="#1" class='a' onclick="fechar()">Home</a></li>
+                    <li><a href="#2" class='a' onclick="fechar()">About me</a></li>
+                    <li><a href="#3" class='a' onclick="fechar()" >Projects</a></li>
+                    <!--<li><a href="#4" class='a' onclick="fechar()">Habilities</a></li>-->
                 </ul>
             </div>
         </nav>
@@ -44,31 +80,63 @@
                     Sou estudante e apaixonado por tecnologia,
                     principalmente aquelas relacionadas com 
                     computadores, sites e aplicativos.
-                    <br />
+                    <br /><br />
                     Atualmente não possuo experiência profissional,
                     porém, pratico tecnologias como HTML, CSS e JS
                     em projetos pessoais (disponíveis em meu Github)
                 </p>
             </div>
+            <div id="img_container">
+                <img src="Avatars - Default.png" alt="Avatar">
 
-            <img src="Avatars - Default.png" alt="Avatar">
-        </div>
-
-        <div class="section s3">
-            <h2>Projetos</h2>
-
-            <div id="container">
-                
+                <div id="html-orbit">
+                    <i class="fa-brands fa-html5 fa-2x"></i>
+                </div>
+                <div id="css-orbit">
+                    <i class="fa-brands fa-css3-alt fa-2x"></i>
+                </div>
+                <div id="js-orbit">
+                    <i class="fa-brands fa-square-js fa-2x"></i>
+                </div>
             </div>
         </div>
 
-        <div class="section s4">
-            <h2>Habilidades</h2>
-
+        <div class="section s3">            
+            <div id="proj-container">
+                <h2>Projetos</h2>
+                <div class="proj-card card1">
+                    <a href="https://wesleyguimaraes.github.io/Inspire/">
+                        <div class="image"><img src="img-inspire.png" alt="img-site1-inspire"></div>
+                        <div class="info">
+                            <h3>Inspire</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="proj-card card2">
+                    <a href="https://wesleyguimaraes.github.io/simple-ecommerce/">
+                        <div class="image"><img src="img-ecommerce.png" alt="img-site1-inspire"></div>
+                        <div class="info">
+                            <h3>Simple e-commerce</h3>
+                        </div>
+                </div>
+                <div class="proj-card card3">
+                    <a href="https://wesleyguimaraes.github.io/Simple-Glass-Effect/">
+                        <div class="image"><img src="img-blureffect.png" alt="img-site1-inspire"></div>
+                        <div class="info">
+                            <h3>Log-in page</h3>
+                        </div>
+                </div>                
+            </div>
         </div>
     </div>
     
 
     <script src="script.js"></script>
+    <!--
+    Credits:
+    avatars: Open Peeps
+    library: FullPage.js
+    Icons: Font awesome
+    -->
 </body>
 </html>
